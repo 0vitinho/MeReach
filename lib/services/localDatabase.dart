@@ -7,7 +7,7 @@ class LocalDatabase {
   String columnId = 'id';
   String columnUrl = 'url';
   String columnUpdatedAt = 'updatedAt';
-  static String databaseName = 'petowner.db';
+  static String databaseName = 'servidor.db';
 
   Future<Database> databaseServers() async {
     final dbPath = await getDatabasesPath();
