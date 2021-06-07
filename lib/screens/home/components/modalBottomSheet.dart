@@ -27,6 +27,9 @@ void openModalBottomSheeet(BuildContext context) {
                   },
                   validator: (value) {
                     if (value == null || value.isEmpty) {
+                      return 'O campo não pode ser vazio';
+                    }
+                    if(value == 'https://'){
                       return 'Insira uma url';
                     }
                     return null;
@@ -36,7 +39,6 @@ void openModalBottomSheeet(BuildContext context) {
               TextButton(
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
-                    print(_userInput);
                     serverController.insertServer(_userInput);
                     ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text('Url adicionada!')));

@@ -28,7 +28,6 @@ class ServersController extends GetxController {
   void onInit() {
     fetchServers();
     super.onInit();
-    // newPet = null;
   }
 
   // Similar to dispose
